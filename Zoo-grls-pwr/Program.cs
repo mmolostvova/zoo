@@ -6,7 +6,8 @@ namespace Zoo_grls_pwr
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Zoo myZoo = new Zoo("Cassablanca");
+            Menu.Start(myZoo);
         }
     }
 }
