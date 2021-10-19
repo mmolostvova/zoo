@@ -54,6 +54,7 @@ namespace Zoo_grls_pwr
                     break;
             }
         }
+
         static public void CloseZoo(Zoo zoo)
         {
             Console.WriteLine("Close Zoo");
@@ -63,6 +64,7 @@ namespace Zoo_grls_pwr
             zoo.ProfitOfDay = 0;
             Console.ReadLine();
         }
+
         static public void KickOutVisitor(Zoo zoo)
         {
             if (zoo.AmauntVisitors > 0)
@@ -70,6 +72,7 @@ namespace Zoo_grls_pwr
                 zoo.AmauntVisitors--;
             }
         }
+
         static public void ShowAnimals(List<Animal> Animals)
         {
             int number = 1;
@@ -78,8 +81,8 @@ namespace Zoo_grls_pwr
                 Console.WriteLine(number + " " + animal.NameOfAnimal + " " + animal.Cost + " $");
                 number++;
             }
-
         }
+
         static public void SellTicket(Zoo zoo)
         {
             List<Animal> availableAnimals = new List<Animal>();
@@ -118,6 +121,7 @@ namespace Zoo_grls_pwr
             }
 
         }
+
         private static bool IsMoneyEnough(double visitorMoney, double ticketPrice)
         {
             return visitorMoney >= ticketPrice;
@@ -135,6 +139,7 @@ namespace Zoo_grls_pwr
             }
             return age;
         }
+
         static public List<int> AskNumOfAnimals(int countAvilableAnimals)
         {
             bool isValidInput = false;
@@ -170,6 +175,7 @@ namespace Zoo_grls_pwr
             while (!isValidInput);
             return numbersOfAnimals;
         }
+
         static bool AskTreat()
         {
             Console.WriteLine("Would you like to buy treats for animals?");
@@ -181,6 +187,7 @@ namespace Zoo_grls_pwr
             }
             return false;
         }
+
         static double CountSum(List<Animal> animals, List<int> choosenAnimals, double treat)
         {
             double sum = 0;
@@ -191,6 +198,5 @@ namespace Zoo_grls_pwr
             sum += treat;
             return sum;
         }
-
     }
 }
